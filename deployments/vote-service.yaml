@@ -5,11 +5,11 @@ metadata:
   labels:
     app: vote
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: vote
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 31111
+     # nodePort: 31111
       name: "vote-service"
